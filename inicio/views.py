@@ -6,6 +6,7 @@ def myHomeview(request, *args, **kwargs):
     myContext = {
         'myText': 'Esto es sobre mi',
         'myNumber': 123,
+        'myList': [22,33,44,55,66],
     }
     return render(request, 'home.html', myContext)
   
