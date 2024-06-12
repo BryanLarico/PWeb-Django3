@@ -11,8 +11,10 @@ def personaTestView(request, *args, **kwargs):
     return render(request, 'personas/descripcion.html', context)
 
 def personaCreateView(request, *args, **kwargs):
-    print('GET: ', request.GET)
-    print('POST: ', request.POST)
+    print(request)
+    if request.method == 'POST':
+        nombre = request.POST.get('q')
+        print(nombre)
     context = {}
     return render(request, 'personas/personasCreate.html', context)
     
