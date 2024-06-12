@@ -3,11 +3,11 @@
 <h2>Hola mundo desde DJango</h2>
 <h2>Con templates </h2>
 <p>
-	{{myText|lower}}
+	{{myText}}
 	{{myNumber}}
 </p>
 <ul>
-	{% for myItem in myList %}
+	{% for myItem in myList|add:mySecondList %}
 		<li>{{forloop.counter}} - {{ myItem }}
 		{% if myItem == 33 %}
 			- Este numero es magico
