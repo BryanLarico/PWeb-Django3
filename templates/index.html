@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Hola mundo desde DJango</h2>
+<h2>Con templates </h2>
+{% endblock %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Templates Base</title>
+	</head>
+	
+	<body>
+		<h1>Hola Mundo desde DJango (con archivo html)</h1>
+		{{request.user}}
+		<h2>Con templates<h2>
+		{{request.user.is_authenticated}}
+	</body>
+</html>
