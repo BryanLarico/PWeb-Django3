@@ -3,16 +3,16 @@
 <h2>Hola mundo desde DJango</h2>
 <h2>Con templates </h2>
 <p>
-	{{myText}}
+	{{myText|lower}}
 	{{myNumber}}
 </p>
 <ul>
 	{% for myItem in myList %}
-	<li>{{forloop.counter}} - {{ myItem }}
-		{% if myItem != 33 and myItem != 44 %}
-			- Este numero no es 33 ni 44
-		{% elif myItem < 50 %}
-			- Este numero es menor a 50
+		<li>{{forloop.counter}} - {{ myItem }}
+		{% if myItem == 33 %}
+			- Este numero es magico
+		{% elif myItem > 50 %}
+			- Este numero es mayor a 50
 		{% endif %}
 		</li>
 	{% endfor %}
