@@ -3,7 +3,11 @@ from django.http import HttpResponse
 
 # Create your views here.
 def myHomeview(request, *args, **kwargs):
-    return render(request, 'index.html', {})
+    myContext = {
+        'myText': 'Esto es sobre mi',
+        'myNumber': 123,
+    }
+    return render(request, 'home.html', myContext)
   
 def anotherView(request, *args, **kwargs):
     print(args, kwargs)
