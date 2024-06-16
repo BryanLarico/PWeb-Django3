@@ -7,6 +7,10 @@
 	{{myNumber}}
 </p>
 <ul>
+	{% for myItem in myList|add:mySecondList %}
+		<li>{{forloop.counter}} - {{ myItem }}
+		{% if myItem == 33 %}
+			- Este numero es magico
 	{% for myItem in myList %}
 		<li>{{forloop.counter}} - {{ myItem|add:2 }}
 		{% if myItem == 33 %}
